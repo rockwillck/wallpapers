@@ -1,0 +1,53 @@
+@font-face {
+	font-family: ClashDisplay;
+	src: url(ClashDisplay-Medium.otf);
+}
+body {
+	font-family: ClashDisplay;
+	background-color: black;
+	color: white;
+}
+p {
+	width: 100%;
+	text-align: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+h1 {
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	font-size: 70px;
+	margin:0;
+	margin-left: 1em;
+	rotate: 90deg;
+	transform-origin: left;
+	filter: drop-shadow(0 0 30px black);
+}
+.wallpapers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.wallpapers > .imgHolder {
+	width: min(300px, 50% - 20px);
+	margin: 10px;
+	box-sizing: border-box;
+	transition: 0.2s;
+	background-color: white;
+	aspect-ratio: 9/16;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imgHolder > img {
+	width: 100%;
+}
+.wallpapers > .imgHolder:hover {
+	scale: 1.03;
+}
+.wallpapers > .imgHolder:active {
+	filter: grayscale();
+}
